@@ -19,7 +19,6 @@ if (computer < 0.33) {
     computer ='semut';
 }
 
-console.log(computer);
 // menentukan rules 
 
 var hasil = '';

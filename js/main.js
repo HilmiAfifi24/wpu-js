@@ -28,9 +28,7 @@ var nama1 = prompt("Masukkan nama anda kembali");
 alert(`Selamat datang dosen ${nama1}`);
 var jmlMhs = prompt("Berapa banyak mahasiswa yang ingin diperiksa?");
 var mhsLulus = prompt("Berapa banyak mahasiswa yang lulus");
-var mhsRulus = prompt("Masukkan nomor mahasiswa yang baru lulus?")
-  .split(",")
-  .map(Number);
+var mhsRulus = prompt("Masukkan nomor mahasiswa yang baru lulus?").split(",").map(Number);
 var noMhs = 1;
 
 for (noMhs; noMhs <= jmlMhs; noMhs++) {

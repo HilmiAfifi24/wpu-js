@@ -6,46 +6,60 @@
 // console.log(bil);
 
 
-// // user defined function
-// function jumlahDuaBilangan(a, b) { // function declaration
-//     var jumlah;
-//     jumlah = a + b;
-//     return jumlah;
-// }
+// user defined function
+function jumlahDuaBilangan(a, b) { // function declaration
+    var jumlah;
+    jumlah = a + b;
+    return jumlah;
+}
 
-// console.log(jumlahDuaBilangan(5, 10));
+console.log(jumlahDuaBilangan(5, 10));
 
-// var jumlahBilangan = function (c, d) {  // function expression
-//     var hasil;
-//     hasil = c * d;
-//     return hasil;
-// }
+var jumlahBilangan = function (c, d) {  // function expression
+    var hasil;
+    hasil = c * d;
+    return hasil;
+}
 
-// console.log(jumlahBilangan(3, 7));
+console.log(jumlahBilangan(3, 7));
 
 function ikhtiar(doa, usaha) {
     if(doa && usaha) {
-        alert`Iktiar kita akan membuahkan hasil`;
+        document.getElementById("demo").innerHTML += `Ikhtiar akan membuahkan hasil`;
     } else {
-        alert`Iktiar kita tidak akan membuahkan hasil`;
+        document.getElementById("demo").innerHTML += `Ikhtiar tidak akan membuahkan hasil`;
     }
 }
 
 ikhtiar(true, true);
 // ikhtiar(true, false);
 
-// menghitung dua buah kubus
-var volumeA = parseInt(prompt(`Masukkan angka sisi pertama`));
-var volumeB = parseInt(prompt(`Masukkan angka sisi kedua`));
+function panggilNama() {
+    var nama = prompt(`Masukkan nama anda`);
 
-function jumlahVolumeKubus() {
+    return nama;
+}
+
+var nama = panggilNama();
+alert(`Halo, selamat datang ${nama}`);
+
+// menghitung dua buah kubus
+
+
+var volumeA = parseInt(prompt(`Masukkan sisi kubus pertama`));
+var volumeB = parseInt(prompt(`Masukkan sisi kubus kedua`));
+var volumeC = parseInt(prompt(`Masukkan sisi kubus ketiga`));
+
+function volumeKubus() {
     var totalVolume = 0;
 
     for (var i = 0; i < arguments.length; i++) {
         totalVolume += arguments[i] * arguments[i] * arguments[i];
     }
+
     return totalVolume;
 }
 
-var totalVolume = jumlahVolumeKubus(volumeA, volumeB);
-alert(`Total volume adalah : ${totalVolume}`)
+var totalVolume = volumeKubus(volumeA, volumeB, volumeC);
+alert(`Total volume kubus adalah : ${totalVolume}`);
+
